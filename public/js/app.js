@@ -1,6 +1,4 @@
 /* eslint-disable no-undef */
-console.log('Client side javascript file is loaded!');
-
 const weatherForm = document.querySelector('form');
 const searchString = document.querySelector('input');
 const messageOne = document.querySelector('#message-1');
