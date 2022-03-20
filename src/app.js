@@ -103,7 +103,7 @@ app.get('/weather', ({query: {address}}, res) => {
                 });
             }
             const loc = `${location.name}, ${location.region}, ${location.country}`;
-            const forecast = `${current.weather_descriptions[0]}. This is currently ${current.temperature} degrees out. It feels like ${current.feelslike} degrees out.`;
+            const forecast = `${current.weather_descriptions[0]}. This is currently ${current.temperature} degrees out. It feels like ${current.feelslike} degrees out. The humidity is ${current.humidity}%.`;
             // res.send(loc+'\n'+forecast);
             res.send({
                 address,
