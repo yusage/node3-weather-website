@@ -4,6 +4,8 @@ const hbs = require('hbs');
 const utils = require('./utils/utils');
 
 const app = express();
+const port = process.env.PORT || 3000;
+
 const publicDirectoryPath = path.join(__dirname,'../public');
 const viewsPath = path.join(__dirname,'../templates/views');
 const partialsPath = path.join(__dirname,'../templates/partials');
@@ -15,7 +17,7 @@ hbs.registerPartials(partialsPath);
 
 app.use(express.static(publicDirectoryPath));
 
-const authorName = 'Wall-E';
+const authorName = 'yusage';
 
 // main page
 app.get('', (req, res) => {
@@ -141,6 +143,6 @@ app.get('*', (req, res) =>{
     });
 });
 
-app.listen(3000, () => {
-    console.log('Listening to port 3000 started');
+app.listen(port, () => {
+    console.log('Listening to port ' + port);
 });
